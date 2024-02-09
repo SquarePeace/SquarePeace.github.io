@@ -4,6 +4,14 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
 
+  i18n: {
+    locales: ['es','en'],
+    defaultLocale: 'es',
+    routing: {
+      prefixDefaultLocale: true
+  }
+},
+
   site: 'https://SquarePeace.github.io',
     // ...
     integrations: [tailwind()],
