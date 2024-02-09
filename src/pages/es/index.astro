@@ -1,34 +1,47 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import '@fontsource/press-start-2p';
-import Card from '../components/Card.astro';
-import Experience from '../components/Experience.astro';
-import Education from '../components/Education.astro';
-import Proyects from '../components/Proyects.astro';
-import Footer from '../components/Footer.astro';
+import NavBar from '../../components/es/NavBar.astro';
+import Card from '../../components/es/Card.astro';
+import Experience from '../../components/es/Experience.astro';
+import Education from '../../components/es/Education.astro';
+import Proyects from '../../components/es/Proyects.astro';
+import Footer from '../../components/es/Footer.astro';
+
+interface Props {
+	language: string;
+}
+
+const {language} = Astro.props;
+
 ---
 
-<Layout title="Allysson Moscoso | SRE Senior | Programador Backend">
-	<main>
 
+<Layout language="es" title="Allysson Moscoso | SRE Senior | Programador Backend">
+	<NavBar/>
+	
+	<main>
 		
-		<Card/>
+		
+		<br>
+
+		<Card lang={language} />
 
 		<br>	
 
-		<Experience/>
+		<Experience lang={language} />
 
 		<br>
 
-		<Education/>
+		<Education lang={language} />
 
 		<br>
 
-		<Proyects/>
+		<Proyects lang={language} />
 
 		<br>
 
-		 <Footer/>
+		<Footer lang={language}/>
 	</main>
 </Layout>
 
