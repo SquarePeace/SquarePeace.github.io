@@ -12,7 +12,7 @@ export default defineConfig({
   }
 },
 
-  site: 'https://SquarePeace.github.io',
+  site: 'https://allyssonmoscoso.github.io',
     // ...
     integrations: [tailwind()],
   });
